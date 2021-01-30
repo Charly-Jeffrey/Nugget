@@ -1,0 +1,3 @@
+[submodule "Nugget/vendor/spdlog"]
+	path = Nugget/vendor/spdlog
+	url = https://github.com/gabime/spdlog
