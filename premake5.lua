@@ -10,6 +10,13 @@ workspace "Nugget"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder ( solution )
+IncludeDir = {}
+IncludeDir["GLFW"] = "Nugget/vendor/GLFW/include"
+
+-- Include GLFW premake file
+include "Nugget/vendor/GLFW"
+
 project "Nugget"
     location "Nugget"
     kind "SharedLib"
@@ -17,6 +24,9 @@ project "Nugget"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+    pchheader "NGpch.h"
+    pchsource "Nugget/src/NGpch.cpp"
 
     files
     {
@@ -26,7 +36,15 @@ project "Nugget"
 
     includedirs
     {
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/src",
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links 
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"
@@ -48,6 +66,11 @@ project "Nugget"
     filter "configurations:Debug"
         defines "NG_DEBUG"
         symbols "On"
+
+        defines
+        {
+            "NG_ENABLE_ASSERTS"
+        }
     
         
     filter "configurations:Release"

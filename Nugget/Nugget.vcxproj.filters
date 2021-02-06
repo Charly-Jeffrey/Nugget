@@ -4,8 +4,18 @@
     <Filter Include="Nugget">
       <UniqueIdentifier>{6FD750C6-5B79-7B9C-4434-8FF0307502ED}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Nugget\Events">
+      <UniqueIdentifier>{73F01912-DFB0-9548-A8EB-DEC5146BDA24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platforms">
+      <UniqueIdentifier>{DDACA145-4917-56BC-9255-0762FEFE3311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platforms\Windows">
+      <UniqueIdentifier>{17E40808-83FA-069E-CC71-92BF38C7D725}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\NGpch.h" />
     <ClInclude Include="src\Nugget.h" />
     <ClInclude Include="src\Nugget\Application.h">
       <Filter>Nugget</Filter>
@@ -16,16 +26,38 @@
     <ClInclude Include="src\Nugget\EntryPoint.h">
       <Filter>Nugget</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nugget\Events\ApplicationEvent.h">
+      <Filter>Nugget\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nugget\Events\Event.h">
+      <Filter>Nugget\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nugget\Events\KeyEvent.h">
+      <Filter>Nugget\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nugget\Events\MouseEvent.h">
+      <Filter>Nugget\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Nugget\Log.h">
       <Filter>Nugget</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nugget\Window.h">
+      <Filter>Nugget</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platforms\Windows\WindowsWindow.h">
+      <Filter>Platforms\Windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\NGpch.cpp" />
     <ClCompile Include="src\Nugget\Application.cpp">
       <Filter>Nugget</Filter>
     </ClCompile>
     <ClCompile Include="src\Nugget\Log.cpp">
       <Filter>Nugget</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platforms\Windows\WindowsWindow.cpp">
+      <Filter>Platforms\Windows</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

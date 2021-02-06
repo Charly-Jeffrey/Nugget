@@ -1,3 +1,4 @@
+#include "NGpch.h"
 #include <Nugget.h>
 
 class Sandbox : public Nugget::Application
