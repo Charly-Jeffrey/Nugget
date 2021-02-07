@@ -38,6 +38,12 @@
     <ClInclude Include="src\Nugget\Events\MouseEvent.h">
       <Filter>Nugget\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nugget\Layer.h">
+      <Filter>Nugget</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nugget\LayerStack.h">
+      <Filter>Nugget</Filter>
+    </ClInclude>
     <ClInclude Include="src\Nugget\Log.h">
       <Filter>Nugget</Filter>
     </ClInclude>
@@ -51,6 +57,12 @@
   <ItemGroup>
     <ClCompile Include="src\NGpch.cpp" />
     <ClCompile Include="src\Nugget\Application.cpp">
+      <Filter>Nugget</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nugget\Layer.cpp">
+      <Filter>Nugget</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nugget\LayerStack.cpp">
       <Filter>Nugget</Filter>
     </ClCompile>
     <ClCompile Include="src\Nugget\Log.cpp">

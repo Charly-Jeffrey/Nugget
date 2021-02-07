@@ -29,6 +29,7 @@ namespace Nugget{
 
 	class NUGGET_API WindowCloseEvent : public Event
 	{
+	public:
 		WindowCloseEvent() {}
 
 		EVENT_CLASS_TYPE(WindowClose)

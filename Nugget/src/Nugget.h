@@ -2,6 +2,7 @@
 
 // For use by Nugget applications
 #include "Nugget/Application.h"
+#include "Nugget/Layer.h"
 #include "Nugget/Log.h"
 
 //> ----- Entry Point -------------------------

@@ -65,21 +65,18 @@ project "Nugget"
     
     filter "configurations:Debug"
         defines "NG_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
-
-        defines
-        {
-            "NG_ENABLE_ASSERTS"
-        }
-    
         
     filter "configurations:Release"
         defines "NG_RELEASE"
+        buildoptions "/MDd"
         optimize "On"
 
     
     filter "configurations:Dist"
         defines "NG_DIST"
+        buildoptions "/MDd"
         optimize "On"
 
 project "Sandbox"
@@ -109,7 +106,7 @@ project "Sandbox"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
+        staticruntime "Off"
         systemversion "latest"
 
         defines
@@ -119,16 +116,19 @@ project "Sandbox"
     
     filter "configurations:Debug"
         defines "NG_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
     
         
     filter "configurations:Release"
         defines "NG_RELEASE"
+        buildoptions "/MDd"
         optimize "On"
 
     
     filter "configurations:Dist"
         defines "NG_DIST"
+        buildoptions "/MDd"
         optimize "On"
 
         
